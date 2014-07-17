@@ -4,13 +4,13 @@ using namespace std;
 
 int main() {
 	
-	int kari_goukei = 0;	//‡Œv’l’i‚Ìˆê•Û‘¶—p
-	int price = 0;			//Å‘å‡Œv’l
+	int kari_goukei = 0;	//åˆè¨ˆå€¤æ®µã®ä¸€æ™‚ä¿å­˜ç”¨
+	int price = 0;			//æœ€å¤§åˆè¨ˆå€¤
 	
-	char set[5];			//Å‘å‡Œv’l‚ÌƒZƒbƒg
+	char set[5];			//æœ€å¤§åˆè¨ˆå€¤ã®ã‚»ãƒƒãƒˆ
 
 	char figure[11];
-	figure[0] = 0;			//ƒtƒBƒMƒ…ƒA‚Ì”‚ª0‚Ì‚Ì’l’i
+	figure[0] = 0;			//ãƒ•ã‚£ã‚®ãƒ¥ã‚¢ã®æ•°ãŒ0ã®æ™‚ã®å€¤æ®µ
 	figure[1] = 1;
 	figure[2] = 6;
 	figure[3] = 8;
@@ -22,42 +22,42 @@ int main() {
 	figure[9] = 26;
 	figure[10] = 30;
 
-	//1ƒZƒbƒg–Ú
+	//1ã‚»ãƒƒãƒˆç›®
 	for ( int first = 1; first <= 10; first++ ){
 	
-		//2ƒZƒbƒg–Ú
+		//2ã‚»ãƒƒãƒˆç›®
 		for ( int second = 0; second <= 5; second++ ){
-			//2ƒZƒbƒg‚Ì‡Œv‚ª10‚ğ’´‚¦‚½ê‡break
+			//2ã‚»ãƒƒãƒˆã®åˆè¨ˆãŒ10ã‚’è¶…ãˆãŸå ´åˆbreak
 			if ( (first + second) > 10 ){
 				break;
 			}
 
-			//3ƒZƒbƒg–Ú
+			//3ã‚»ãƒƒãƒˆç›®
 			for ( int third = 0; third <= 3; third++ ){
-				//3ƒZƒbƒg‚Ì‡Œv‚ª10‚ğ’´‚¦‚½ê‡break
+				//3ã‚»ãƒƒãƒˆã®åˆè¨ˆãŒ10ã‚’è¶…ãˆãŸå ´åˆbreak
 				if ( (first + second + third) > 10 ){
 					break;
 				}
 				
-				//4ƒZƒbƒg–Ú
+				//4ã‚»ãƒƒãƒˆç›®
 				for ( int fourth = 0; fourth <= 2; fourth++ ){
-					//4ƒZƒbƒg‚Ì‡Œv‚ª10‚ğ’´‚¦‚½ê‡break
+					//4ã‚»ãƒƒãƒˆã®åˆè¨ˆãŒ10ã‚’è¶…ãˆãŸå ´åˆbreak
 					if ( (first + second + third + fourth) > 10 ){
 						break;
 					}
 					
-					//5ƒZƒbƒg–Ú
+					//5ã‚»ãƒƒãƒˆç›®
 					for ( int fifth = 0; fifth <= 2; fifth++ ){
-						//5ƒZƒbƒg‚Ì‡Œv‚ª10‚ğ’´‚¦‚½ê‡break
+						//5ã‚»ãƒƒãƒˆã®åˆè¨ˆãŒ10ã‚’è¶…ãˆãŸå ´åˆbreak
 						if ( (first + second + third + fourth + fifth) > 10 ){
 							break;
 						}
 
-						//5ƒZƒbƒg‚Ì‡Œv‚ª10–¢–‚Ìê‡10‘Ì‚É‚È‚é‚Ü‚Å1‚Â‚¸‚Â”„‹p
+						//5ã‚»ãƒƒãƒˆã®åˆè¨ˆãŒ10æœªæº€ã®å ´åˆ10ä½“ã«ãªã‚‹ã¾ã§1ã¤ãšã¤å£²å´
 						int i = 10 - (first + second + third + fourth + fifth);
 						kari_goukei = figure[first] + figure[second] + figure[third] + figure[fourth] + figure[fifth] + (i * figure[1]);
 						
-						//Å‘å’l‚Ì•Û‘¶
+						//æœ€å¤§å€¤ã®ä¿å­˜
 						if  ( kari_goukei > price ){
 							set[0] = first;
 							set[1] = second;
